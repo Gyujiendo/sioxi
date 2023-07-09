@@ -20,5 +20,5 @@ Route::get('/', function () {
 
 Route::get('/home', 'App\Http\Controllers\Controller@returnView')->defaults('view', 'home');
 Route::get('/live', 'App\Http\Controllers\Controller@returnView')->defaults('view', 'live');
-Route::get('/sns', 'App\Http\Controllers\Controller@returnView')->defaults('view', 'sns');
-
+Route::get('/tracklist', 'App\Http\Controllers\Controller@returnView')->defaults('view', 'tracklist');
+Route::get('/bio', 'App\Http\Controllers\Controller@returnView')->defaults('view', 'bio');

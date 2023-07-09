@@ -14,15 +14,19 @@
     }
   </style>
 
-<title>Sioxi_Home</title>
+<!--Yield for changing titles-->
+<title>@yield('title')</title>
+<!--Yield title ends here-->
 </head>
+
+<!--Body Starts here-->
 <body class="dark-mode">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/af3e0fd724.js" crossorigin="anonymous"></script>
 
-
+<!--Navbar Starts Here-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">sioxi</a>
@@ -32,33 +36,48 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home">Homepage</a>
+          <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/live">Liveshows</a>
+          <a class="nav-link {{ Request::is('tracklist') ? 'active' : '' }}" href="/tracklist">Tracklist</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/sns">Social Medias</a>
+          <a class="nav-link {{ Request::is('live') ? 'active' : '' }}" href="/live">Live</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('bio') ? 'active' : '' }}" href="/bio">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/live"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/live"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/live"><i class="fa-brands fa-instagram"></i></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<!--Navbar Ends Here-->
 
-Facebook links.
 
-Instagram links.
 
-Twitter links.
+<!--Yield for placeholder in the main content-->
+@yield('content')
+<!--End of Yield-->
 
-<br><br>
-
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
+<!--Footer Starts Here-->
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">sioxi</h5>
+    <p class="card-text">Website made by Endo Guilherme Yuji, 2023.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<!--Footer Ends Here-->
 
 </body>
-
-
-</body>
+<!--Body Ends here-->
 </html>
