@@ -6,6 +6,7 @@
 
 @section('content')
 
-<img src="{{ asset('img/cicadashell.jpg') }}" alt="Nukegara, Cicada Shell">
+
+
 
 @endsection
