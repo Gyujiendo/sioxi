@@ -30,7 +30,7 @@
 </head>
 
 <!--Body Starts here-->
-<body class="dark-mode ">
+<body class="dark-mode">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -65,6 +65,8 @@ $(document).ready(function() {
 });
 
 
+
+
 </script>
 
 <!--Navbar Starts Here-->
@@ -77,34 +79,34 @@ $(document).ready(function() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto"> <!-- Add mx-auto class for center alignment -->
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="home">Home</a>
+          <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="home"><i class="fa-solid fa-house"></i> Home &nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('tracklist') ? 'active' : '' }}" href="/tracklist">Tracklist</a>
+          <a class="nav-link {{ Request::is('tracklist') ? 'active' : '' }}" href="/tracklist"><i class="fa-solid fa-compact-disc"></i> Tracklist &nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('live') ? 'active' : '' }}" href="/live">Live</a>
+          <a class="nav-link {{ Request::is('live') ? 'active' : '' }}" href="/live"><i class="fa-solid fa-guitar"></i> Live &nbsp;&nbsp;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('bio') ? 'active' : '' }}" href="/bio">Bio</a>
+          <a class="nav-link {{ Request::is('bio') ? 'active' : '' }}" href="/bio"><i class="fa-solid fa-book"></i> Bio &nbsp;&nbsp;</a>
         </li>
       </ul>
       
       <ul class="navbar-nav ml-auto"> <!-- Add ml-auto class for right alignment -->
         <li class="nav-item">
-          <a class="nav-link" href="/live"><i class="fa-brands fa-twitter fa-xl"></i></a>
+          <a class="nav-link" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/live"><i class="fa-brands fa-facebook fa-xl"></i></a>
+          <a class="nav-link" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/live"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          <a class="nav-link" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/live">Nihongo</a>
+          <a class="nav-link" href=#>&nbsp;&nbsp;日本語</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/live">English</a>
+          <a class="nav-link" href=#>English</a>
         </li>
       </ul>
     </div>
