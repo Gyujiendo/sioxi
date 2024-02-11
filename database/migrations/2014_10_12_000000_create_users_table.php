@@ -18,9 +18,15 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->integer('age');
+            $table->string('description');
             $table->timestamps();
         });
     }
+
+    #tinker command to default data insert
+    #php artisan tinker
+    #User::create(["name"=> "larainfo","email"=>"larainfo@gmail.com","password"=>bcrypt("password"), "age"=>"28", "description"=>"A good boi"]);
 
     /**
      * Reverse the migrations.

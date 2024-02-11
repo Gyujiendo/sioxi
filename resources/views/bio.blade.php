@@ -6,39 +6,122 @@
 
 @section('content')
 
-<br><br>
+<style>
 
-<div class="card bg-dark text-white w-75 mx-auto">
-    <div class="card-body d-flex align-items-center">
-      <img src="{{ asset('img/imgtobeadded.png') }}" class="d-block w-25 h-25 me-4" alt="Sioxi Band">
-      <div>
-        <p>Welcome to the world of Sioxi - the dynamic duo of boys based in Osaka, Japan. Known for their captivating live shows, Sioxi brings a fresh and innovative sound to the music scene. As an Ironical Electro Pop band, they skillfully blend elements of irony and electronic pop, creating a unique and mesmerizing musical experience.</p>
-        <p>Their music delves into the ebb and flow of emotions, riding the waves of feelings and expressing them through heartfelt lyrics that immerse listeners knee-deep in a pool of emotions. With every word carefully crafted and woven, Sioxi paints vivid and relatable stories through their music.</p>
-        <p>Drawing inspiration from renowned artist Porter Robinson, Sioxi showcases a distinctive sound that resonates with fans and leaves a lasting impact. Their passion for music and dedication to their craft shine through in every performance, making each live show a truly unforgettable experience.</p>
-        <p>Join us on this musical journey with Sioxi and explore the fascinating world of Ironical Electro Pop. Let the waves of emotions and innovative beats take you on a one-of-a-kind adventure that will leave you wanting more.</p>
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* 928px; if you want to fix only in the main home page text */
+  overflow: hidden;
+  z-index: -1;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(10%); /* Adjust the brightness as needed */
+}
+
+</style>
+
+<br><br><br><br><br>
+
+<div id="video-container">
+  <video id="video" autoplay muted loop>
+    <source src="{{ asset('img/seavid4.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<h1 class="text-center" data-aos="fade-up" data-aos-duration="900">SIOXIってのは？</h1>
+
+<br><br><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-right" data-aos-duration="1300">
+        <!-- Content for col-4 -->
+        <img src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band">
+      </div>
+      <div class="col-md-8" data-aos="fade-left" data-aos-duration="1300">
+        <!-- Content for col-8 -->
+        <h5>
+          ようこそ、Sioxiの世界へ！彼らは大阪を拠点とするエネルギッシュなデュオです。<br><br>
+          
+          Sioxiは魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。<br><br>
+          
+          アイロニカル・エレクトロポップバンドとして、彼らは皮肉とエレクトロニックポップの要素を巧みにブレンドし、ユニークで魅力的な音楽体験を創り出しています。<br><br>
+          
+          彼らの音楽は感情の激流に没入し、心に残る歌詞を通じて感情の波に乗り、聴衆を感情のプールに膝まで浸からせます。吟味された言葉と編み上げられた音楽で、Sioxiは鮮やかで共感力のあるストーリーを描き出しています。<br><br>
+          
+          著名なアーティストであるポーター・ロビンソンからのインスピレーションを得て、Sioxiはファンに響く独自のサウンドを披露し、その情熱と職人技によって、各パフォーマンスが忘れられないものになります。<br><br>
+          
+          Sioxiとともにこの音楽の旅に参加し、アイロニカル・エレクトロポップの魅力的な世界を探索しましょう。感情の波と革新的なビートに身を委ね、まるで他にはない冒険に連れて行かれるでしょう。これはまさに、もっと欲しくなるような一体験の冒険です。</h5>
       </div>
     </div>
   </div>
   
+  <br><br><br><br><br><br>
+    <hr>
   <br><br>
+
+  <h1 class="text-center" data-aos="fade-up">バンドメンバーと協力者</h1>
+
+  <br><br><br><br>
   
-  <div class="card bg-dark text-white w-75 mx-auto">
-  <div class="d-flex justify-content-between w-75 mx-auto my-4">
-    <img src="{{ asset('img/ryuts.jpg') }}" class="d-block w-25 h-25 rounded-circle" alt="Takano Ryuuta">
-    <img src="{{ asset('img/okamochan.jpg') }}" class="d-block w-25 h-25 rounded-circle" alt="Okamotochan">
-    <img src="{{ asset('img/yuj.jpg') }}" class="d-block w-25 h-25 rounded-circle" alt="Yuji">
-  </div>
+  <div class="container mx-auto">
+    <div class="row align-items-center">
+        <div class="col-md-4" data-aos="fade-right">
+            <img src="{{ asset('img/ryuts.jpg') }}" class="rounded-circle img-fluid" alt="Takano Ryuuta">
+        </div>
+        <div class="col-md-8" data-aos="fade-left">
+            <h5>鷹野隆太（Takano Ryuta）<br><br>
+              &middot;ポジション: 歌手<br><br>
+              &middot;特技: いつもおしゃれで、正義の味方（できる限り）。酒をたくさん飲んでも酔わない（羨ましい！）。<br><br>
+              &middot;その他: バンドの歌詞も手がけ、ステージ上でカリスマ性を発揮。シェフなので食べ物のレパートリーも一級品。</h5>
+        </div>
+    </div>
   
-  <div class="w-75 mx-auto">
-    <p>Takano Ryuuta, our lead singer and composer, is the living embodiment of an anime protagonist – charming, dramatic, and always ready to break into an epic song-and-dance routine. But wait, there's more! When he's not belting out tunes on stage, he's donning an apron and whipping up culinary masterpieces in the kitchen. Move over Gordon Ramsay, we've got our very own designated chef!</p>
-    <br>
-    <p>Next up, we have the one and only Okamotochan, our resident guitarist with a unique talent – the ability to sleep anywhere and everywhere, especially when it's time to go out for drinks. But don't be fooled by the napping, because deep down, he's a total cinnamon roll, sweet and lovable, adding an extra dose of charm to the chaos.</p>
-    <br>
-    <p>Now, let's talk about the brains behind this operation (or so he thinks) – Yuji, the website-making, karaoke-loving, aspiring programmer extraordinaire! Despite having zero knowledge of music, he believes he's the almighty karaoke god, serenading everyone with passion and gusto. And after a few shots of whiskey, behold the transformation! Yuji becomes a bona fide cowboy, ready to yee-haw and lasso anything that moves.</p>
-  </div>
-  </div>
+    <br><br><br><br>
+  
+    <div class="row align-items-center">
+        <div class="col-md-8 order-md-1 order-2" data-aos="fade-left">
+            <h5>岡本一嘉（Okamoto Kazuhiro）<br><br>
+              &middot;ポジション: ギタリスト<br><br>
+              &middot;特技: どこでも寝ることができる（特にお酒を飲む時）。優しくて常に敬語で喋る　（この時代で偉いことだぜ！）。<br><br>
+              &middot;その他: 見た目とは裏腹に、ギターをかっこよく弾きこなす。<br><br></h5>
+        </div>
+        <div class="col-md-4 order-md-2 order-1" data-aos="fade-right">
+            <img src="{{ asset('img/okamochan.jpg') }}" class="rounded-circle img-fluid" alt="Okamotochan">
+        </div>
+    </div>
+  
+    <br><br><br><br>
+  
+    <div class="row align-items-center">
+        <div class="col-md-4" data-aos="fade-right">
+            <img src="{{ asset('img/yuj.jpg') }}" class="rounded-circle img-fluid" alt="Yuji">
+        </div>
+        <div class="col-md-8" data-aos="fade-left">
+            <h5>ユウジ（Yuji）<br><br>
+
+              &middot;ポジション: バンドメンバーではない、ただのウェブサイトの開発者<br><br>
+              &middot;特技: 遠いところからの旅人で、皆が大好きのバカ外人。ウィスキーショット3杯飲むとカウボーイに変身する。<br><br>
+              &middot;その他: タフなふりをするが、実はソフトで人懐っこい。食べ飲み放題がいつも挑戦しているが、結局おなかいっぱいになって最初にあきらめる。</h5>
+        </div>
+    </div>
+  </div>  
   
 
-<br><br>
+<br><br><br><br>
 
 @endsection
