@@ -13,7 +13,7 @@
 body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
       
     }
    
@@ -23,7 +23,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%; /* 928px; if you want to fix only in the main home page text */
-      overflow: hidden;
+      overflow: hidden !important;
       z-index: -1;
     }
 
@@ -32,6 +32,7 @@ body {
       height: 100%;
       object-fit: cover;
       filter: brightness(28%); /* Adjust the brightness as needed */
+      overflow-x: hidden !important;
     }
 
 body.darker-mode {
@@ -59,6 +60,7 @@ body.darker-mode {
   }
 }
 
+/*CSS for the Carousel images.*/
 @media only screen and (min-width: 740px) {
     .responsive-image {
       height: 400px !important;
@@ -68,111 +70,109 @@ body.darker-mode {
 
 </style>
 
-<div id="video-container">
-  <video id="video" autoplay muted loop>
-    <source src="{{ asset('img/seavid.mp4') }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+<div style="overflow-x: hidden !important;"><!--Main parent container to keep things in check with the X axis-->
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<!--Homepage text starts here-->
-<div class="container text-lg text-center" style="height: 400px;">
-  <div class="row">
-    <div class="col-lg-6 col-12 mx-auto">
+  <div class="mx-auto" id="video-container">
+    <video id="video" preload="auto" autoplay muted loop>
+      <source src="{{ asset('img/seavid.mp4') }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-      <h1 class="terminal fs-1">
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <!--Homepage text starts here-->
+  <div class="container text-lg text-center" style="height: 400px;">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
 
+        <h1 class="terminal fs-1">
+
+      </div>
     </div>
   </div>
-</div>
-<!--Homepage text ends here-->
 
-<br><br><br><br><br><br><br><br>
-<div>
+  <br><br><br><br><br><br><br><br>
+  <div>
 
-  <hr><br><br><br><br>
-    
-    <div class="container mx-auto">
-      <!-- Bootstrap container -->
+    <hr><br><br><br><br>
+      
+      <!--About text STARTS here-->
+      <div class="container mx-auto">
 
-      <h1 class="text-center" data-aos="fade-up">What Sioxi is About?</h1><br><br><br>
+        <h1 class="text-center" data-aos="fade-up">What Sioxi is About?</h1><br><br><br>
 
-      <div class="row">
-        <!-- Bootstrap row -->
+        <div class="row">
 
-        <div class="col-md-4" data-aos="fade-right" data-aos-duration="1500">
-          <!-- First column with col-4 -->
-          <img src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band" style="filter: brightness(90%);">
-        </div>
-
-        <div class="col-md-8" data-aos="fade-left" data-aos-duration="1500">
-          <!-- Second column with col-8 -->
-          <!-- Add your content for the second column here -->
-      <h4>Step into the vibrant world of Sioxi, an Ironical Electro Pop sensation hailing from Osaka, Japan. Led by the charismatic Takano Ryuuta, whose anime protagonist charm extends from epic performances to culinary wizardry.
-        <br><br> Okamotochan, the resident guitarist, brings a sweet touch to the chaos, mastering the art of napping anywhere. 
-        <br><br> Behind the scenes, meet Yuji – the website wizard, karaoke enthusiast, and whiskey-fueled cowboy.
-        <br><br> Sioxi's music, inspired by the likes of Porter Robinson, weaves irony and electronic pop into a mesmerizing experience. Dive into their emotive lyrics, ride the waves of feelings, and join this one-of-a-kind musical adventure.</h4>   
-        </div>
-      </div>
-    </div>
-
-<br><br><br><br><br><br><br><br><br><hr>
-</div>
-
-<!--Homepage carousel starts here-->
-
-
-        <br><br><h1 class="text-center" data-aos="fade-right">最近入れた曲</h1><br><br>
-
-        <hr class="w-75 mx-auto"><br><br>
- 
-          <div class="slick text-center mx-auto" style="width: 90%;">
-              @foreach ($tracks as $key => $track)
-                  <div data-aos="fade-right" data-aos-duration="1400">
-                      <img src="{{ asset('storage/' . $track->img_path) }}" class="mx-auto text-white responsive-image" style="height: 250px; width: 250px;" alt="..."><br>
-                      <h4>{{$track->title}}</h4>
-                      <p>Debuted in {{ $track->debut_date->format('F jS, Y') }}</p>
-                  </div>
-              @endforeach
-
+          <div class="col-lg-4" data-aos="fade-right" data-aos-duration="1500">
+            <img src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band" style="filter: brightness(90%);">
           </div>
 
-        <hr>  
-
-<!--Homepage carousel ends here-->
-
-<!--Homepage text starts here-->
-<div class="container text-lg text-center">
-  <div class="row">
-    <div class="col-lg-6 col-12 mx-auto">
-      <br><br>
-
-      <div class="card text-white border-0" style="background-color: transparent;">
-        <div class="card-body">
-          <h1><p data-aos="fade-up">ネクストライブの知らせ:</p><br>
-            <hr>
-            <br><p data-aos="fade-up">{{$lives->location}}</p> <br>
-            @if ($lives->media->count() > 0)
-            <img src="{{ asset('storage/' . $lives->media[0]->file_path) }}" class="img-fluid" alt="Thumbnail" data-aos="fade-up">
-          @else
-            <p>No thumbnail available</p>
-          @endif
-            <br><br>
-            <p data-aos="fade-up">Join us! {{ $lives->live_date->format('F jS, Y') }}</p><br>
-
-            <hr><br>
-            <p data-aos="fade-up">カウントダウン</p><br>
-            <span id="countdown" data-aos="fade-up"></span><br>
-
-          </h1>
+          <div class="col-lg-8 text-center" data-aos="fade-left" data-aos-duration="1500">
+              <br><h4>Step into the vibrant world of Sioxi, an Ironical Electro Pop sensation hailing from Osaka, Japan. Led by the charismatic Takano Ryuuta, whose anime protagonist charm extends from epic performances to culinary wizardry.
+                <br><br> Behind the scenes, meet Yuji – the website wizard, karaoke enthusiast, and whiskey-fueled cowboy.
+                <br><br> Sioxi's music, inspired by the likes of Porter Robinson, weaves irony and electronic pop into a mesmerizing experience. Dive into their emotive lyrics, ride the waves of feelings, and join this one-of-a-kind musical adventure.</h4></div>   
+          </div>
         </div>
       </div>
+      <!--About text ENDS here-->
 
-    </div>
-    </div>
+  <br><br><br><br><br><br><br><br><br><hr>
+  </div>
+
+  <!--Homepage carousel starts here-->
+
+
+<div style="overflow-x: hidden !important;">  
+          <br><br><h1 class="text-center" data-aos="fade-right">Recent Records</h1><br><br>
+
+          <hr class="w-75 mx-auto"><br><br>
+  
+            <div class="slick text-center mx-auto" style="width: 90%;">
+                @foreach ($tracks as $key => $track)
+                    <div data-aos="fade-right" data-aos-duration="1400">
+                        <img src="{{ asset('storage/' . $track->img_path) }}" class="mx-auto text-white responsive-image" style="height: 250px; width: 250px;" alt="..."><br>
+                        <h4>{{$track->title}}</h4>
+                        <p>Debuted in {{ $track->debut_date->format('F jS, Y') }}</p>
+                    </div>
+                @endforeach
+
+            </div>
 </div>
+          <hr>  
 
+  <!--Homepage carousel ends here-->
+
+  <!--Homepage text starts here-->
+  <div class="container text-lg text-center">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <br><br>
+
+        <div class="card text-white border-0" style="background-color: transparent;">
+          <div class="card-body">
+            <h1><p data-aos="fade-up">ネクストライブの知らせ:</p><br>
+              <hr>
+              <br><p data-aos="fade-up">{{$lives->location}}</p> <br>
+              @if ($lives->media->count() > 0)
+              <img src="{{ asset('storage/' . $lives->media[0]->file_path) }}" class="img-fluid" alt="Thumbnail" data-aos="fade-up">
+            @else
+              <p>No thumbnail available</p>
+            @endif
+              <br><br>
+              <p data-aos="fade-up">Join us! {{ $lives->live_date->format('F jS, Y') }}</p><br>
+
+              <hr><br>
+              <p data-aos="fade-up">カウントダウン</p><br>
+              <span id="countdown" data-aos="fade-up"></span><br>
+
+            </h1>
+          </div>
+        </div>
+
+      </div>
+      </div>
+  </div>
+</div>
 <!--Homepage text ends here-->
 
 <br>
@@ -185,7 +185,7 @@ body.darker-mode {
 
 <!-- Add the typewriter animation script here -->
 <script>
-const text = "Ironical Electro Popband<br><br>寄せては返す感情の波に<br><br>膝までどっぷりと浸かって綴った<br><br>言葉";
+const text = "Ironical Electro Pop<br><br>寄せては返す感情の波に<br><br>膝までどっぷりと浸かって綴った<br><br>言葉";
 const textElement = document.querySelector('.terminal');
 let index = 0;
 

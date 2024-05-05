@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -16,6 +16,7 @@
 <style>
 
 .fa-youtube,
+.fa-tiktok,
 .fa-instagram,
 .fa-x-twitter {
     transition: all 0.3s ease; /* Add a smooth transition for all properties over 0.3 seconds with ease timing function */
@@ -30,6 +31,10 @@
 }
 
 .fa-x-twitter:hover {
+    transform: scale(1.2); 
+}
+
+.fa-tiktok:hover {
     transform: scale(1.2); 
 }
 
@@ -55,7 +60,7 @@ body {
   transition: background-color 3s ease;
   overflow-y: scroll; /* Always show vertical scrollbar */
   scrollbar-width: thin; /* Customize the width of the scrollbar (optional) */
-  overflow-x: hidden;  
+  overflow-x: hidden !important;  
 }
 
 
@@ -171,8 +176,13 @@ a {
           &nbsp;&nbsp;&nbsp;
           <a href="https://www.instagram.com/sioxi_official/" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-instagram fa-xl"></i></a>
           &nbsp;&nbsp;&nbsp;
-          <a href="https://twitter.com/_sioxi_" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+          <a href="https://www.tiktok.com/@sioxi_official" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-tiktok fa-lg"></i></a>
           &nbsp;&nbsp;&nbsp;
+          <a href="https://twitter.com/_sioxi_" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+          &nbsp;&nbsp;&nbsp;          
+
+
+
         </li>
       </ul>
       
@@ -220,8 +230,8 @@ a {
     </div>
     <div class="col-md-11 text-center">
       <br>
-        <p>Band integrants: Ryuuta Takano (鷹野隆太)、Kazuhiro Okamoto (岡本一嘉).</p>
-         <p>Website made by <a href="https://www.linkedin.com/in/guilherme-yuji-endo-652b06150/" target="_blank" style="color: inherit; text-decoration: none;"><u>Endo Guilherme Yuji</u></a> (エンドウ・ギレルメ・ユウジ), 2024.</p>
+        <p>Vocalist and Song Writer: Ryuuta Takano (鷹野隆太)</p>
+         <p>Website made by <a href="https://www.linkedin.com/in/guilherme-yuji-endo-652b06150/" target="_blank" style="color: inherit; text-decoration: none;"><u>Endo Guilherme Yuji</u></a> (エンドウ・ギレルメ・ユウジ)</p>
       </div>
       <br>
       </div>
