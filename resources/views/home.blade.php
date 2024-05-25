@@ -66,7 +66,15 @@ body.darker-mode {
       height: 400px !important;
       width: 400px !important;
     }
+    
   }
+
+  @media only screen and (max-width: 600px) {
+  #hidebr {
+    br {
+     display: none;
+}}  }
+  
 
 </style>
 
@@ -79,8 +87,9 @@ body.darker-mode {
     </video>
   </div>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><div id="hidebr"><br><br><br><br><br></div>
   <!--Homepage text starts here-->
+  <!--This is the cool terminal effect-->
   <div class="container text-lg text-center" style="height: 400px;">
     <div class="row">
       <div class="col-lg-6 col-12 mx-auto">
@@ -91,7 +100,7 @@ body.darker-mode {
     </div>
   </div>
 
-  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><div id="hidebr"><br><br><br><br></div>
   <div>
 
     <hr><br><br><br><br>
@@ -108,9 +117,17 @@ body.darker-mode {
           </div>
 
           <div class="col-lg-8 text-center" data-aos="fade-left" data-aos-duration="1500">
-              <br><h4>Step into the vibrant world of Sioxi, an Ironical Electro Pop sensation hailing from Osaka, Japan. Led by the charismatic Takano Ryuuta, whose anime protagonist charm extends from epic performances to culinary wizardry.
-                <br><br> Behind the scenes, meet Yuji – the website wizard, karaoke enthusiast, and whiskey-fueled cowboy.
-                <br><br> Sioxi's music, inspired by the likes of Porter Robinson, weaves irony and electronic pop into a mesmerizing experience. Dive into their emotive lyrics, ride the waves of feelings, and join this one-of-a-kind musical adventure.</h4></div>   
+              <br><h4>ようこそ、Sioxiの世界へ！彼らは大阪を拠点とするエネルギッシュなデュオです。
+
+                Sioxiは魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。
+                
+                アイロニカル・エレクトロポップバンドとして、彼らは皮肉とエレクトロニックポップの要素を巧みにブレンドし、ユニークで魅力的な音楽体験を創り出しています。
+                
+                彼らの音楽は感情の激流に没入し、心に残る歌詞を通じて感情の波に乗り、聴衆を感情のプールに膝まで浸からせます。吟味された言葉と編み上げられた音楽で、Sioxiは鮮やかで共感力のあるストーリーを描き出しています。
+                
+                著名なアーティストであるポーター・ロビンソンからのインスピレーションを得て、Sioxiはファンに響く独自のサウンドを披露し、その情熱と職人技によって、各パフォーマンスが忘れられないものになります。
+                
+                Sioxiとともにこの音楽の旅に参加し、アイロニカル・エレクトロポップの魅力的な世界を探索しましょう。感情の波と革新的なビートに身を委ね、まるで他にはない冒険に連れて行かれるでしょう。これはまさに、もっと欲しくなるような一体験の冒険です。</div>   
           </div>
         </div>
       </div>

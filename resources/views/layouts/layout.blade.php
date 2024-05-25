@@ -85,17 +85,13 @@ a {
 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  width: 5px;
+  z-index: 1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #146a77;
+  background: #f1f1f1;
 }
 
 /* Handle on hover */
@@ -133,6 +129,18 @@ a {
   transform-origin: bottom left;
 }
 
+@media only screen and (min-width: 800px) {
+   #mobilever{
+    display: none;
+   }  }
+
+   @media only screen and (max-width: 800px) {
+   #desktopver{
+    display: none;
+   }  }   
+
+
+
 
   </style>
 
@@ -144,8 +152,8 @@ a {
 <!--Body Starts here-->
 <body class="dark-mode coolfont">
 
-<!--Navbar Starts Here-->
-<nav class="navbar navbar-expand-lg navbar-dark {{ Request::is('home', 'tracklist', 'live', 'bio', 'store') ? '' : 'bg-dark' }}">
+<!-- Desktop Navbar Starts Here-->
+<nav  id="desktopver" style="z-index: 5;" class="navbar navbar-expand-lg navbar-dark {{ Request::is('home', 'tracklist', 'live', 'bio', 'store') ? '' : 'bg-dark' }}">
   <div class="container-fluid fs-6">
     &nbsp;&nbsp;<a class="navbar-brand " href="#" >SIOXI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,7 +197,60 @@ a {
     </div>
   </div>
 </nav>
-<!--Navbar Ends Here-->
+<!--Desktop Navbar Ends Here-->
+
+<!-- Mobile Navbar Starts Here--><div id="mobilever">
+<nav class="navbar navbar-expand-lg navbar-dark {{ Request::is('home', 'tracklist', 'live', 'bio', 'store') ? '' : 'bg-dark' }}">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="#" style="padding-left: 5px;">SIOXI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto text-center fs-6">
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('home') ? 'active' : '' }}" href="{{ url('/home') }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <hr>
+        <li class="nav-item" style="padding-left: 5px; padding-right: 5px;">
+          <a class="nav-link {{ Request::is('tracklist') ? 'active' : '' }}" href="{{ url('/tracklist') }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RECORDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <hr>
+        <li class="nav-item" style="padding-left: 5px; padding-right: 5px;">
+          <a class="nav-link {{ Request::is('live') ? 'active' : '' }}" href="{{ url('/live')}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <hr>
+        <li class="nav-item" style="padding-left: 5px; padding-right: 5px;">
+          <a class="nav-link {{ Request::is('bio') ? 'active' : '' }}" href="{{ url('/bio')}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+        <hr>
+        <li class="nav-item" style="padding-left: 5px; padding-right: 5px;">
+          <a class="nav-link {{ Request::is('store') ? 'active' : '' }}" href="{{ url('/store')}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STORE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </li>
+      </ul>
+
+      <hr>
+      
+      <ul class="navbar-nav ml-auto" style="padding-left: 10px;"> <!-- Add ml-auto class for right alignment -->
+        <li class="nav-item dropdown mx-auto">
+          <a href="https://www.youtube.com/@sioxi109" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-youtube fa-xl"></i></a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="https://www.instagram.com/sioxi_official/" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="https://www.tiktok.com/@sioxi_official" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+          &nbsp;&nbsp;&nbsp;
+          <a href="https://twitter.com/_sioxi_" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+          &nbsp;&nbsp;&nbsp;          
+
+
+
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<!--Mobile Navbar Ends Here--></div>
 
 <!--Logged in or not toast-->
 @if(auth()->check())
@@ -221,7 +282,7 @@ a {
 
 
 
-<!--Footer Starts Here-->
+<!--Desktop Footer Starts Here--><div id="desktopver">
 <div class="card text-white border-0" style="background-color: transparent;">
   <div class="row g-0"><hr>
     <div class="col-md-1 text-start">
@@ -238,7 +299,26 @@ a {
     </div>
   </div>
 </div>
-<!--Footer Ends Here-->
+<!--Desktop Footer Ends Here--></div>
+
+<!--Mobile Footer Starts Here--><div id="mobilever">
+<div class="card text-white border-0" style="background-color: transparent;">
+  <div class="row g-0"><hr>
+    <div class="col-md-1 text-start">
+      
+      <h3 style="text-align: center;">SIOXI</h3>
+    </div>
+    <div class="col-md-11 text-center mx-auto w-75">
+      <br>
+        <p>Vocalist and Song Writer: Ryuuta Takano (鷹野隆太)</p>
+         <p>Website made by <a href="https://www.linkedin.com/in/guilherme-yuji-endo-652b06150/" target="_blank" style="color: inherit; text-decoration: none;"><u>Endo Guilherme Yuji</u></a> (エンドウ・ギレルメ・ユウジ)</p>
+      </div>
+      <br>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Mobile Footer Ends Here--></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
