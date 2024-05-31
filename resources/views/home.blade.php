@@ -103,10 +103,11 @@ body.darker-mode {
   <br><br><br><br><div id="hidebr"><br><br><br><br></div>
   <div>
 
-    <hr><br><br><br><br>
+    <hr>
       
-      <!--About text STARTS here-->
-      <div class="container mx-auto">
+      <!--About text DESKTOP STARTS here-->
+      <div id="desktopver" class="container mx-auto">
+        <br><br><br><br>
 
         <h1 class="text-center" data-aos="fade-up">What Sioxi is About?</h1><br><br><br>
 
@@ -116,24 +117,45 @@ body.darker-mode {
             <img src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band" style="filter: brightness(90%);">
           </div>
 
-          <div class="col-lg-8 text-center" data-aos="fade-left" data-aos-duration="1500">
-              <br><h4>ようこそ、Sioxiの世界へ！彼らは大阪を拠点とするエネルギッシュなデュオです。
-
-                Sioxiは魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。
-                
-                アイロニカル・エレクトロポップバンドとして、彼らは皮肉とエレクトロニックポップの要素を巧みにブレンドし、ユニークで魅力的な音楽体験を創り出しています。
-                
-                彼らの音楽は感情の激流に没入し、心に残る歌詞を通じて感情の波に乗り、聴衆を感情のプールに膝まで浸からせます。吟味された言葉と編み上げられた音楽で、Sioxiは鮮やかで共感力のあるストーリーを描き出しています。
-                
-                著名なアーティストであるポーター・ロビンソンからのインスピレーションを得て、Sioxiはファンに響く独自のサウンドを披露し、その情熱と職人技によって、各パフォーマンスが忘れられないものになります。
-                
-                Sioxiとともにこの音楽の旅に参加し、アイロニカル・エレクトロポップの魅力的な世界を探索しましょう。感情の波と革新的なビートに身を委ね、まるで他にはない冒険に連れて行かれるでしょう。これはまさに、もっと欲しくなるような一体験の冒険です。</div>   
+          <div class="col-lg-8 text-left" data-aos="fade-left" data-aos-duration="1500">
+              <h5>Sioxiは大阪を拠点とするエネルギッシュなアーティストです。<br><br>
+                魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。<br><br>
+                アイロニカル・エレクトロポップアーティストとして、
+                皮肉とエレクトロニックポップの要素を巧みにブレンドし、ユニークで魅力的な音楽体験を創り出しています。<br><br>
+                音楽は感情の激流に没入し、心に残る歌詞を通じて感情の波に乗り、聴衆を感情のプールに膝まで浸からせます。<br><br>
+                吟味された言葉と編み上げられた音楽で、Sioxiは鮮やかで共感力のあるストーリーを描き出しています。<br><br>
+                著名なアーティストであるポーター・ロビンソンからのインスピレーションを得て、Sioxiはファンに響く独自のサウンドを披露し、その情熱と職人技によって、
+                各パフォーマンスが忘れられないものになります。Sioxiとともにこの音楽の旅に参加し、アイロニカル・エレクトロポップの魅力的な世界を探索しましょう。<br><br>
+                感情の波と革新的なビートに身を委ね、まるで他にはない冒険に連れて行かれるでしょう。<br><br>
+                これはまさに、もっと欲しくなるような一体験の冒険です。</div></h5>
           </div>
         </div>
       </div>
-      <!--About text ENDS here-->
+      <br><br><br>
+      <!--About text DESKTOP ENDS here-->
 
-  <br><br><br><br><br><br><br><br><br><hr>
+      <!--About text MOBILE STARTS here-->
+      <div id="mobilever" class="container mx-auto">
+        <br>
+
+        <h1 class="text-center" data-aos="fade-up">What Sioxi is About?</h1><br>
+
+          <div class="col-lg-4" data-aos="fade-right" data-aos-duration="1500">
+            <img src="{{ asset('img/sioxi.png') }}" class="img-fluid h-50 w-50 mx-auto d-block" alt="Sioxi Band" style="filter: brightness(90%);">
+          </div>
+
+          <div class="col-lg-8 text-left" data-aos="fade-left" data-aos-duration="1500">
+              <br><h5 style="font-size: 17px;">Sioxiは大阪を拠点とするエネルギッシュなアーティストです。<br><br>
+                魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。<br><br>
+                アイロニカル・エレクトロポップアーティストとして、
+                皮肉とエレクトロニックポップの要素を巧みにブレンドし、ユニークで魅力的な音楽体験を創り出しています。<br><br>
+                これはまさに、もっと欲しくなるような一体験の冒険です。</h5></div>
+          </div>
+        </div>
+      </div>
+      <!--About text MOBILE ENDS here-->
+
+ <br><br><br><br><br><hr>
   </div>
 
   <!--Homepage carousel starts here-->

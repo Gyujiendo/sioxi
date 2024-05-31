@@ -33,10 +33,8 @@ body {
 
 </style>
 
-  <!--Desktop version starts here--><div id="desktopver">
-
 <div style="overflow-x: hidden !important;"><!--Main parent container to keep things in check with the X axis-->
-  <br><br><br><br><br>
+ <div id="desktopver"><br><br><br><br><br></div>
 
   <div id="video-container">
     <video id="video" preload="auto" autoplay muted loop>
@@ -44,6 +42,10 @@ body {
       Your browser does not support the video tag.
     </video>
   </div>
+
+
+  <!--Desktop version starts here--><div id="desktopver">
+
 
 
   <h1 class="text-center" data-aos="fade-up" data-aos-duration="900">SIOXIってのは？</h1>
@@ -140,11 +142,13 @@ body {
       <div class="row">
         <div class="col-md-4" data-aos="fade-right" data-aos-duration="1300">
           <!-- Content for col-4 -->
-          <img src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band">
+          <img id="mobilever" src="{{ asset('img/sioxi.png') }}" class="img-fluid mx-auto d-block" alt="Sioxi Band" style="filter: brightness(90%); height: 200px; width: 200px;">
+          <img id="desktopver" src="{{ asset('img/sioxi.png') }}" class="img-fluid" alt="Sioxi Band">
         </div>
         <div class="col-md-8" data-aos="fade-left" data-aos-duration="1300">
           <!-- Content for col-8 -->
-          <h5>
+          <br><br>
+          <h5 style="font-size: 15px;">
             ようこそ、Sioxiの世界へ！彼らは大阪を拠点とするエネルギッシュなデュオです。<br><br>
             
             Sioxiは魅力的なライブパフォーマンスで知られ、音楽シーンに新しい革新的なサウンドをもたらしています。<br><br>
@@ -175,7 +179,7 @@ body {
           </div>
           <div class="col-md-8" data-aos="fade-left">
             <br><br><h3>鷹野隆太（Takano Ryuta）</h3><br><br>
-               <h5>ポジション:  歌手<br><br>
+               <h5 style="font-size: 15px;">ポジション:  歌手<br><br>
                特技:  いつもおしゃれで、正義の味方（できる限り）。酒をたくさん飲んでも酔わない（羨ましい！）。<br><br>
                その他:  バンドの歌詞も手がけ、ステージ上でカリスマ性を発揮。シェフなので食べ物のレパートリーも一級品。</h5>
           </div>
@@ -192,7 +196,7 @@ body {
             </div>
             <div class="col-md-8" data-aos="fade-left">
               <br><br><h3>ユウジ（Yuji）</h3><br><br>
-                <h5>ポジション: バンドメンバーではない、ただのウェブサイトの開発者<br><br>
+                <h5 style="font-size: 15px;">ポジション: バンドメンバーではない、ただのウェブサイトの開発者<br><br>
                 特技: 遠いところからの旅人で、皆が大好きのバカ外人。ウィスキーショット3杯飲むとカウボーイに変身する。<br><br>
                 その他: タフなふりをするが、実はソフトで人懐っこい。食べ飲み放題がいつも挑戦しているが、結局おなかいっぱいになって最初にあきらめる。</h5>
             </div>

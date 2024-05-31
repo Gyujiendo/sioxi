@@ -200,7 +200,7 @@ body.darker-mode {
                 <hr class="w-75 mx-auto">
                 <br>
                 <div class="lyrics-container" style="max-height: 275px; overflow-y: auto;">
-                    <h5>{!! $track->lyrics !!}</h5>
+                    <h5 style="font-size: 15px;">{!! $track->lyrics !!}</h5>
                 </div>
                 <br>
                 <p class="card-text"><div class="scaleeff">
